@@ -4,7 +4,7 @@ class AppFlowyGroupCard extends StatelessWidget {
   const AppFlowyGroupCard({
     super.key,
     this.child,
-    this.margin = const EdgeInsets.all(4),
+    this.margin = const EdgeInsetsDirectional.all(4),
     this.decoration = const BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.zero,
@@ -13,7 +13,7 @@ class AppFlowyGroupCard extends StatelessWidget {
   });
 
   final Widget? child;
-  final EdgeInsets margin;
+  final EdgeInsetsDirectional margin;
   final BoxDecoration decoration;
   final BoxConstraints boxConstraints;
 

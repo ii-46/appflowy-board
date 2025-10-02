@@ -7,14 +7,14 @@ class AppFlowyGroupFooter extends StatelessWidget {
     super.key,
     this.icon,
     this.title,
-    this.margin = const EdgeInsets.symmetric(horizontal: 12),
+    this.margin = const EdgeInsetsDirectional.symmetric(horizontal: 12),
     this.height,
     this.onAddButtonClick,
   });
 
   final Widget? icon;
   final Widget? title;
-  final EdgeInsets margin;
+  final EdgeInsetsDirectional margin;
   final double? height;
   final OnFooterAddButtonClick? onAddButtonClick;
 

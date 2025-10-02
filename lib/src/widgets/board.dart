@@ -27,12 +27,12 @@ class AppFlowyBoardConfig {
     this.boardCornerRadius = 6.0,
     this.groupCornerRadius = 6.0,
     this.groupBackgroundColor = Colors.transparent,
-    this.groupMargin = const EdgeInsets.symmetric(horizontal: 8),
-    this.groupHeaderPadding = const EdgeInsets.symmetric(horizontal: 16),
-    this.groupBodyPadding = const EdgeInsets.symmetric(horizontal: 12),
-    this.groupFooterPadding = const EdgeInsets.symmetric(horizontal: 12),
+    this.groupMargin = const EdgeInsetsDirectional.symmetric(horizontal: 8),
+    this.groupHeaderPadding = const EdgeInsetsDirectional.symmetric(horizontal: 16),
+    this.groupBodyPadding = const EdgeInsetsDirectional.symmetric(horizontal: 12),
+    this.groupFooterPadding = const EdgeInsetsDirectional.symmetric(horizontal: 12),
     this.stretchGroupHeight = true,
-    this.cardMargin = const EdgeInsets.symmetric(horizontal: 3, vertical: 4),
+    this.cardMargin = const EdgeInsetsDirectional.symmetric(horizontal: 3, vertical: 4),
   });
 
   // board
@@ -41,14 +41,14 @@ class AppFlowyBoardConfig {
   // group
   final double groupCornerRadius;
   final Color groupBackgroundColor;
-  final EdgeInsets groupMargin;
-  final EdgeInsets groupHeaderPadding;
-  final EdgeInsets groupBodyPadding;
-  final EdgeInsets groupFooterPadding;
+  final EdgeInsetsDirectional groupMargin;
+  final EdgeInsetsDirectional groupHeaderPadding;
+  final EdgeInsetsDirectional groupBodyPadding;
+  final EdgeInsetsDirectional groupFooterPadding;
   final bool stretchGroupHeight;
 
   // card
-  final EdgeInsets cardMargin;
+  final EdgeInsetsDirectional cardMargin;
 }
 
 class AppFlowyBoard extends StatelessWidget {
@@ -335,19 +335,19 @@ class _AppFlowyBoardContentState extends State<_AppFlowyBoardContent> {
     );
   }
 
-  EdgeInsets _marginFromIndex(int index) {
+  EdgeInsetsDirectional _marginFromIndex(int index) {
     if (widget.boardController.groupDatas.isEmpty) {
       return widget.config.groupMargin;
     }
 
     if (index == 0) {
       // remove the left padding of the first group
-      return widget.config.groupMargin.copyWith(left: 0);
+      return widget.config.groupMargin.copyWith(start: 0);
     }
 
     if (index == widget.boardController.groupDatas.length - 1) {
       // remove the right padding of the last group
-      return widget.config.groupMargin.copyWith(right: 0);
+      return widget.config.groupMargin.copyWith(end: 0);
     }
 
     return widget.config.groupMargin;

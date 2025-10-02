@@ -74,8 +74,8 @@ class AppFlowyBoardGroup extends StatefulWidget {
     this.scrollController,
     this.onDragStarted,
     this.onDragEnded,
-    this.margin = EdgeInsets.zero,
-    this.bodyPadding = EdgeInsets.zero,
+    this.margin = EdgeInsetsDirectional.zero,
+    this.bodyPadding = EdgeInsetsDirectional.zero,
     this.cornerRadius = 0.0,
     this.backgroundColor = Colors.transparent,
     this.stretchGroupHeight = true,
@@ -96,8 +96,8 @@ class AppFlowyBoardGroup extends StatefulWidget {
   final OnGroupDragStarted? onDragStarted;
 
   final OnGroupDragEnded? onDragEnded;
-  final EdgeInsets margin;
-  final EdgeInsets bodyPadding;
+  final EdgeInsetsDirectional margin;
+  final EdgeInsetsDirectional bodyPadding;
   final double cornerRadius;
   final Color backgroundColor;
   final bool stretchGroupHeight;

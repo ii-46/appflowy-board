@@ -140,7 +140,7 @@ class _MultiBoardShrinkwrapListExampleState
       return Align(
         alignment: Alignment.centerLeft,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 20, vertical: 30),
           child: Text(item.s),
         ),
       );
@@ -171,7 +171,7 @@ class _RichTextCardState extends State<RichTextCard> {
     return Align(
       alignment: Alignment.centerLeft,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsetsDirectional.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

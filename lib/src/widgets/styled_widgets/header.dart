@@ -11,7 +11,7 @@ class AppFlowyGroupHeader extends StatelessWidget {
     this.title,
     this.addIcon,
     this.moreIcon,
-    this.margin = EdgeInsets.zero,
+    this.margin = EdgeInsetsDirectional.zero,
     this.onAddButtonClick,
     this.onMoreButtonClick,
   });
@@ -21,7 +21,7 @@ class AppFlowyGroupHeader extends StatelessWidget {
   final Widget? title;
   final Widget? addIcon;
   final Widget? moreIcon;
-  final EdgeInsets margin;
+  final EdgeInsetsDirectional margin;
   final OnHeaderAddButtonClick? onAddButtonClick;
   final OnHeaderMoreButtonClick? onMoreButtonClick;
 
@@ -44,7 +44,7 @@ class AppFlowyGroupHeader extends StatelessWidget {
         IconButton(
           onPressed: onMoreButtonClick,
           icon: moreIcon!,
-          padding: const EdgeInsets.all(4),
+          padding: const EdgeInsetsDirectional.all(4),
         ),
       );
     }
@@ -54,7 +54,7 @@ class AppFlowyGroupHeader extends StatelessWidget {
         IconButton(
           onPressed: onAddButtonClick,
           icon: addIcon!,
-          padding: const EdgeInsets.all(4),
+          padding: const EdgeInsetsDirectional.all(4),
         ),
       );
     }
